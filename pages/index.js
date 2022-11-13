@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>SugarSnap</title>
         <meta name="description" content="The landing page for everyone" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main>
           <h1 className="text-3xl font-bold underline">
