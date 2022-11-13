@@ -1,6 +1,7 @@
 * nextjs No TS Yes ESLint
   * https://nextjs.org/docs
   * `npx create-next-app@latest` NB - will creat new dir
+* Add components, Images folders
 * Typescript checking (https://blog.jetbrains.com/webstorm/2019/09/using-typescript-to-check-your-javascript-code/_)
   * add tsconfig.js file in webstorm by New in the project folder, should be option for tsconfig.json with following:
   * add `"allowJs": true` to the default compiler options, finished file should look soemthing like this
@@ -28,6 +29,39 @@
   * replace favicon
   * 
 * tailwind
+  * follow guide https://tailwindcss.com/docs/guides/nextjs
+```json
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+then modify tailwind.config.js to include nextjs paths
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+then add this to globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+```
 * fontawesome
-* --later supabase
+  * follow guide on https://fontawesome.com/v6/docs/web/use-with/react/
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-regular-svg-icons
+npm i --save @fortawesome/free-brands-svg-icons
+npm i --save @fortawesome/react-fontawesome@latest
+```
+* -->later supabase
 * 
